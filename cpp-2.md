@@ -3,6 +3,10 @@ title: "Modern C++ for C programmers: part 2"
 date: 2018-06-14T20:26:28+02:00
 draft: false
 ---
+**NOTE**: If you like this stuff, come work with me over at PowerDNS -
+[aspiring C++ programmers
+welcome](https://www.powerdns.com/careers.html#securityDeveloper)!
+
 Welcome back! In [part 1](../c++-1/) I discussed how `std::string` and
 `std::vector` interoperate with C, including with the C standard library
 `qsort` call. We also discovered that the C++ `std::sort` is 40% faster than
@@ -444,7 +448,12 @@ questions, please hit me up on
 [@PowerDNS_Bert](https://twitter.com/PowerDNS_Bert) or
 bert.hubert@powerdns.com
 
-Please stay tuned for part 3!
+Part 3 is [now available](../cpp-3).
+
+**NOTE**: If you like this stuff, come work with me over at PowerDNS -
+[aspiring C++ programmers
+welcome](https://www.powerdns.com/careers.html#securityDeveloper)!
+
 
 <script>
 /* dear reader - this is not to track you, but I need some metrics to know

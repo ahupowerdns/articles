@@ -3,6 +3,10 @@ title: "Modern C++ for C Programmers: Part 3"
 date: 2018-07-02T21:30:31+02:00
 draft: false
 ---
+**NOTE**: If you like this stuff, come work with me over at PowerDNS -
+[aspiring C++ programmers
+welcome](https://www.powerdns.com/careers.html#securityDeveloper)!
+
 Welcome back!  In [part 2](../cpp-2/) I discussed basic classes, threading,
 atomic operations, smart pointers, resource acquisition and (very briefly)
 namespaces.
@@ -477,6 +481,11 @@ In part 4 we will continue to explore C++ and containers, and if you have
 any favorite things you'd like to see discussed or questions, please do hit
 me up on [@PowerDNS_Bert](https://twitter.com/PowerDNS_Bert) or
 bert.hubert@powerdns.com.
+
+**NOTE**: If you like this stuff, come work with me over at PowerDNS -
+[aspiring C++ programmers
+welcome](https://www.powerdns.com/careers.html#securityDeveloper)!
+
 
 <script>
 /* dear reader - this is not to track you, but I need some metrics to know
