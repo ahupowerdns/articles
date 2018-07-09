@@ -213,7 +213,7 @@ Als ik bedrijven hierop wijs krijg ik vaak defensieve reacties:
  * Hij staat wel op de website van onze moedermaatschappij / groep
  * We verwachten dat een sollicitant een beetje doorzettingsvermogen heeft
  en belt om te vragen hoe het zit
- * Als je Googled vind je hem wel!
+ * Als je Googelt vind je hem wel!
 
 Die laatste is relevant: het is niet genoeg dat je vacature **bestaat**,
 mocht je hem weten te vinden.  Hij moet ook daadwerkelijk te vinden zijn!
