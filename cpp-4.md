@@ -1,7 +1,7 @@
 ---
 title: "Modern C++ for C Programmers: Part 4"
 date: 2018-07-12T13:07:40+02:00
-draft: true
+draft: false
 ---
 **NOTE**: If you like this stuff, come work with me over at PowerDNS -
 [aspiring C++ programmers
@@ -39,7 +39,7 @@ std::sort(vec.begin(), vec.end(),
 Although lambdas are, in essence, syntactical sugar, their availability has
 made modern C++ a far more expressive language. In addition, as noted in
 [part 1](../c++-1/), passing code snippets as function pointers severely
-restricts what the compiler can to do optimize code. So not only do
+restricts what the compiler can do to optimize code. So not only do
 lambdas lead to fewer lines of code, the resulting binaries can be faster
 too.
 
@@ -167,7 +167,7 @@ which is a class instance you can call (because it has overloaded
 
 Expanding our indexer
 =====================
-In the indexer from [part 2](../cpp-2) we ended up with:
+In the indexer from [part 3](../cpp-3) we ended up with:
 
 ```
 struct Location
@@ -180,7 +180,7 @@ std::unordered_map<string, vector<Location>> allWords;
 ```
 
 This contains an unordered list of all words found in the indexed files,
-plus per word a `vector` of `Locations`s where the word was found. We used
+plus per word a `vector` of `Location`s where the word was found. We used
 an unordered map since this is 40% faster than an ordered one. 
 
 However, if we want to perform lookups for things like "main*", to match
@@ -208,7 +208,7 @@ Should we be in the mood, we could attempt to be smarter. As written above,
 every word is now present in memory twice, once in `allWords`, once in
 `owords`. 
 
-It is a pretty C like thing to not do this and live on the edge for a bit:
+It is a pretty C-like thing to not do this and live on the edge for a bit:
 
 ```
   std::vector<const string*> optrwords;
@@ -392,7 +392,8 @@ There are several other useful containers:
    present unnecessary overhead otherwise.
  * [`std::set`](https://en.cppreference.com/w/cpp/container/set). This is
    like a `std::map<string,void>`, in other words, it is a key value store
-   without keys. Like `std::map` it is ordered, which you often do not need.
+   without values. Like `std::map` it is ordered, which you often do not need.
+   Luckily there is also `std::unordered_set`.
  * [`std::multi_map`](https://en.cppreference.com/w/cpp/container/multi_map)
    and [`std::multi_set`](https://en.cppreference.com/w/cpp/container/multi_set).
    These work just like regular `set` and `map`, but then allowing multiple
@@ -559,8 +560,8 @@ Let's fill it with some data:
 The first line uses our `typedef` to make an actual instance of our
 container, the second line takes the current time and puts it in a double.
 
-Then some magic happens called a [user-defined
-literal](https://en.cppreference.com/w/cpp/language/user_literal) which
+Then some magic called a [user-defined
+literal](https://en.cppreference.com/w/cpp/language/user_literal) happens, which
 means that `"1.2.3.4"_ipv4` gets converted to 0x01020304 - **at compile
 time**. To observe how this works, head over to
 [multi.cc](https://github.com/ahupowerdns/hello-cpp/blob/master/multi.cc) on
@@ -587,7 +588,7 @@ This prints:
 In the first line, we request a reference to the `TimeTag` index, which we
 iterate over as usual in the second line.
 
-Let's do a partial lookup in the 'main' index, which is on the full 4-tuple:
+Let's do a partial lookup in the 'main' (first) index, which is on the full 4-tuple:
 
 ```
   cout<<"Search for source 1.2.3.4, every port"<<endl;
